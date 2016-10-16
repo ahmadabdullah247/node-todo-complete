@@ -1,8 +1,7 @@
-var scotchTodo = angular.module('scotchTodo', []);
+var nodeTodo = angular.module('nodeTodo', []);
 
 function mainController($scope, $http) {
     $scope.formData = {};
-
     // when landing on the page, get all todos and show them
     $http.get('/api/todos')
         .success(function(data) {
@@ -37,5 +36,4 @@ function mainController($scope, $http) {
                 console.log('Error: ' + data);
             });
     };
-
 }

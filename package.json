@@ -1,7 +1,7 @@
 {
-    "name": "todo-app",
+    "name": "node-todo",
     "version": "0.0.0",
-    "description": "todo application.",
+    "description": "Single page todo application using node and angular",
     "main": "server.js",
     "author": "Ahmad Abdullah",
     "dependencies": {

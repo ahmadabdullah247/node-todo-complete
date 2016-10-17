@@ -10,8 +10,8 @@ var Schema = mongoose.Schema;
 var app = express();
 
 // configuration =========================================================================
-mongoose.connect('mongodb://localhost:27017/tododb'); // connect to local mongoDB database 
-//mongoose.connect('mongodb://ahmad:123456@ds059316.mlab.com:59316/todo');
+//mongoose.connect('mongodb://localhost:27017/tododb'); // connect to local mongoDB database 
+mongoose.connect('mongodb://ahmad:123456@ds059316.mlab.com:59316/todo');
 
 mongoose.connection.once('connected', function() {
     console.log("Connected to database")
@@ -76,7 +76,7 @@ app.delete('/api/todos/:todo_id', function(req, res) {
 });
 
 // view  ===============================================================================
-app.get('/', function(req, res) {
+app.get('*', function(req, res) {
     res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
 });
 
